@@ -1,6 +1,6 @@
 #include <stdarg.h>
 #include <string.h>
-
+#include <stdio.h>
 /**
  * _printf - print formatted output
  * @format: the format
@@ -9,11 +9,8 @@
  */
 int _printf(const char *format, ...)
 {
-	int i, size = (int)strlen(format);
 	va_list ap;
 	va_start(ap, format);
 
-	va_end(ap);
-
-	return (size);
+	return (vprintf(format, ap));
 }
